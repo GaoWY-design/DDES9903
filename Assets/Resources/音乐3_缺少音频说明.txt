@@ -1,0 +1,10 @@
+请把背景音乐文件放到本目录，并命名为：
+
+  音乐3.wav
+或
+  音乐3.ogg
+
+Resources.Load 名称必须是：音乐3
+
+场景物体 GameAudio_Music3 已配置 loop / 2D / volume=0.55。
+若缺失，BackgroundMusicBootstrap 会创建挂载点并在 Console 给出警告。
