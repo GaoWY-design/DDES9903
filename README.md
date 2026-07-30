@@ -1,45 +1,34 @@
-# Overview
-EZPZ Interaction Toolkit can get you building genuine, independently usable, interactive prototypes without needing to write code. All you need to do is drag and drop! Built on top of Unity 3D, it is a collection of scripts and prefabricated objects that you can mix and match to suit your purposes.  
+# 失物招领（Lost And Found）v0.1
 
-Guided Worksheet: 
-* https://bit.ly/4rVf964
+Unity 版本：`2022.3.62f3c1`  
+渲染：Built-in Standard（无 URP/HDRP）  
+输入：旧版 Input Manager  
 
-Quick, 13 minute video guide below (12:44): 
-* https://youtu.be/GZrhy2qOsnE
+## 一键重建场景
 
-Unity, quick reminder videos (most less than 2 mins):
-* https://www.youtube.com/playlist?list=PLZP8wzCUfgsIQBKy3F4EwIlDgjX4_JypG
+菜单：`Tools / Lost And Found / Build Scene`
 
-Specific, EZPZ toolkit video guides:
-* https://www.youtube.com/playlist?list=PLZP8wzCUfgsKfgJDXuiHHAw-qjcEev1k-
+会生成：房间、灯光、木桌、书、钱包、墙字、玩家、UI、材质贴图、Build Settings（仅 `LostAndFound`）。
 
-# Licensing Info
-by Matt Cabanag https://www.linkedin.com/in/mattavc/
+过程截图：`Tools / Lost And Found / Capture Process Screenshots`  
+输出目录：桌面 `失物招领_过程截图`
 
-MIT License:
-Copyright 2022 - present, Matt Cabanag
+## 游玩步骤
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+1. 打开场景 `Assets/Scenes/LostAndFound.unity`，点 Play  
+2. WASD 走动，鼠标环视；Esc 解锁鼠标，左键再锁定  
+3. 走近并注视桌上蓝书，出现 `Is this your book?`，按 **E**（Yes 变绿，书消失）  
+4. 可注视钱包，出现 `Is this your Wallet?`，按 **E**（No 变绿，钱包仍在）  
+5. **拿书后**转身走后门洞出口触发器 → 控制锁定 + `GAME OVER!`  
+6. 未拿书走出口不会结束
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+## 已知差异
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+- 若 `Assets/Resources/音乐3` 音频文件不存在，BGM 不播放（挂载点与 Bootstrap 已就绪，Console 有提示）
+- 贴图为程序化占位噪声，可后续替换 AI 贴图
 
------
-Above copyright notice does not include the dependencies used below:
+## 旧 Unity6 工程备份
 
-3rd Party Assets Used:
-* https://assetstore.unity.com/packages/essentials/starter-assets-first-person-character-controller-196525
-* https://assetstore.unity.com/packages/tools/network/rest-client-for-unity-102501
-* https://www.clipartmax.com/download/m2i8H7G6d3K9N4N4_the-mouse-cursor-click-icon-shown-click-icon/
-* https://www.pexels.com/photo/brown-brick-wall-1227515/
-* https://www.pexels.com/photo/person-holding-white-and-black-frame-4065183/
-* https://unsplash.com/photos/2JONUbTfN38
-* https://freesound.org/people/sandyrb/sounds/105348/
-* https://assetstore.unity.com/packages/tools/network/rest-client-for-unity-102501
-* https://github.com/proyecto26/RestClient
-* https://freesound.org/people/kwahmah_02/sounds/275072/
+原 EZPZ/URP 工程已移出，备份目录名形如：
 
-Google images for:
-Peppa Pig, Gundam, Elmo, Doraemon, Poo plush toy
-
+`E:\UNITY\DDES9903_Unity6_Backup_YYYYMMDD_HHMMSS`
